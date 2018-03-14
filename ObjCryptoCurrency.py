@@ -3,6 +3,7 @@
 # -*- Author: aB9 -*-
 # -*- Date: 03/12 -*-
 
+
 #Cryptocurrency Class
 class CryptoCurrency:
     def __init__(self, asset_id, name, time, cr_close, cr_high, cr_low, cr_open, cr_volume_from, cr_volume_to):
