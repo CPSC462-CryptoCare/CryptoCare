@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>CryptoCare</title>
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <h1>List of CryptoCurrencies</h1>
+        <table style="width=100%">
+            <tr>
+                <th>Name</th>
+                <th>Open</th>
+                <th>Close</th>
+                <th>High</th>
+                <th>Low</th>
+            </tr>
+            {% for cryptocurrency in cryptocurrencies %}
+                <tr>
+                    <td>
+                       <a href="{{cryptocurrency.asset_id}}">{{cryptocurrency.name}}</a>         
+                    </td>
+                    <td>
+                    {{cryptocurrency.cr_open}}
+                    </td>
+                    <td>
+                    {{cryptocurrency.cr_close}}
+                    </td>
+                    <td>
+                    {{cryptocurrency.cr_high}}
+                    </td>
+                    <td>
+                    {{cryptocurrency.cr_low}}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
