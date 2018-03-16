@@ -10,14 +10,15 @@ cryptocurrencies_list = {'Bitcoin':'BTC',
                          'Iota':'IOT',
                          'Ethereum': 'ETH',
                          'Litecoin':'LTC',
-                         'Nem':'XEM',
-                         'Neo':'NEO',
-                         'Dashcoin':'DSH',
-                         'Numerai':'NMR',
-                         'OmiseGo':'OMG',
-                         'QTUM':'QTUM',
-                         'Stratis':'STRAT',
-                         'Waves':'WAVES'}
+#                         'Nem':'XEM',
+#                         'Neo':'NEO',
+#                         'Dashcoin':'DSH',
+#                         'Numerai':'NMR',
+#                         'OmiseGo':'OMG',
+#                         'QTUM':'QTUM',
+#                         'Stratis':'STRAT',
+#                         'Waves':'WAVES'
+}
 
 
 #Cryptocurrency Object Class
