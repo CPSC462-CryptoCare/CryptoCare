@@ -34,8 +34,18 @@ class CryptoCurrency:
         self.cr_volume_to = cr_volume_to
         ####End of __init__ ####
 ####End of Class Cryptocurrency#####
-        
 
+#News article object class
+class NewsArticle:
+    def __init__(self, author="", title="", description="", url="", urlToImage="", publishedAt=""):
+        self.author = author
+        self.title = title
+        self.description = description
+        self.url = url
+        self.urlToImage = urlToImage
+        self.PublishedAt = publishedAt
+####End of Class NewsArticle####
+        
 #CrypotCurrency in details Object class        
 class CryptoCurrencyDetails:
 #    def __init__(self,FROMSYMBOL, FROMSYMBOL_D, TOSYMBOL, TOSYMBOL_D, PRICE, PRICE_D, 
