@@ -80,6 +80,37 @@ class CryptoCurrencyDetails:
 #        self.SUPPLY_D = SUPPLY_D
 #        self.MKTCAP = MKTCAP
 #        self.MKTCAP_D = MKTCAP_D
+
+class CryptoCurrencyMarket:
+    def __init__(self, MARKET, FROMSYMBOL, TOSYMBOL, FLAGS, PRICE, LASTUPDATE, LASTVOLUME, LASTVOLUMETO, LASTTRADEID, VOLUMEDAY,
+                 VOLUME24HOUR, VOLUME24HOURTO, OPENDAY, HIGHDAY, LOWDAY, OPEN24HOUR, HIGH24HOUR, LOW24HOUR, LASTMARKET,
+                 CHANGE24HOUR, CHANGEDAY, CHANGEPCTDAY, SUPPLY, MKTCAP, TOTALVOLUME24H, TOTALVOLUME24HTO):
+        self.MARKET = MARKET
+        self.FROMSYMBOL = FROMSYMBOL
+        self.TOSYMBOL = TOSYMBOL
+        self.FLAGS = FLAGS
+        self.PRICE = PRICE
+        self.LASTUPDATE = LASTUPDATE
+        self.LASTVOLUME = LASTVOLUME
+        self.LASTVOLUMETO = LASTVOLUMETO
+        self.LASTTRADEID = LASTTRADEID
+        self.VOLUMEDAY = VOLUMEDAY
+        self.VOLUME24HOUR = VOLUME24HOUR
+        self.VOLUME24HOURTO = VOLUME24HOURTO
+        self.OPENDAY = OPENDAY
+        self.HIGHDAY = HIGHDAY
+        self.LOWDAY = LOWDAY
+        self.OPEN24HOUR = OPEN24HOUR
+        self.HIGH24HOUR = HIGH24HOUR
+        self.LOW24HOUR = LOW24HOUR
+        self.LASTMARKET = LASTMARKET
+        self.CHANGE24HOUR = CHANGE24HOUR
+        self.CHANGEDAY = CHANGEDAY
+        self.CHANGEPCTDAY = CHANGEPCTDAY
+        self.SUPPLY = SUPPLY
+        self.MKTCAP = MKTCAP
+        self.TOTALVOLUME24H = TOTALVOLUME24H
+        self.TOTALVOLUME24HTO = TOTALVOLUME24HTO
     
     def __init__(self, values_dict=[], display_values_dict=[]):
         self.values = values_dict
