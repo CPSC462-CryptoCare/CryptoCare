@@ -31,6 +31,7 @@ def index():
         response = requests.get(URL)
         
         #Request successful
+      
         if response.status_code == 200:
             json_response = response.json()
             #store data into cryptocurrency_data list
