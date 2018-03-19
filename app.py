@@ -16,11 +16,13 @@ CrCurrency = ObjCryptoCurrency.CryptoCurrency
 CrCurrencyDetails = ObjCryptoCurrency.CryptoCurrencyDetails
 crc_list  = ObjCryptoCurrency.cryptocurrencies_list
 
+crMarket_list = ObjCryptoCurrency.CryptoCurrencyMarket
 news_list = ObjCryptoCurrency.NewsArticle
 
 #List to store CryptoCurrency data fetched from the server
 cryptocurrencies_data =[]
 news_data = []
+CrMarket_data = []
 
 
 #Index.html page
@@ -110,7 +112,26 @@ def cryptocurrency_in_details(cryptocurrency_asset_id):
         return render_template('error_page.html')
     
     return render_template('cryptocurrency_in_details.html',currency = currency,currency_details = currency_details)
-
+   
+   #market url
+    URL = 'https://min-api.cryptocompare.com/data/pricemultifull?fsyms={}&tsyms=USD'.format(cryptocurrency_asset_id)
+    response = requests.get(URL)
+        
+    #Request successful
+    if response.status_code == 200:
+        json_response = response.json()
+        if json_response['Response'] == 'Success':
+           data = json_response['Data'][0]
+           CrMarket_data.append(crMarket_list( data['MARKET'], data['FROMSYMBOL'], data['TOSYMBOL'], data['FLAGS'], data['PRICE'], data['LASTUPDATE'], data['LASTVOLUME'], data['LASTVOLUMETO'], data['LASTTRADEID'], data['VOLUMEDAY'], data['VOLUME24HOUR'], data['VOLUME24HOURTO'], data['OPENDAY'], data['HIGHDAY'], data['LOWDAY'], data['OPEN24HOUR'], data['HIGH24HOUR'], data['LOW24HOUR'], data['LASTMARKET'], data['CHANGE24HOUR'], data['CHANGEDAY'], data['CHANGEPCTDAY'], data['SUPPLY'], data['MKTCAP'], data['TOTALVOLUME24H'], data['TOTALVOLUME24HTO']))
+           
+        
+        #news_details= news_list(values_dict,display_values_dict)
+        
+    #Error occurred
+    else:
+        return render_template('error_page.html')
+    
+    return render_template('cryptocurrency_in_details.html',currency = currency,currency_details = currency_details)
 
 if __name__ == "__main__":
     app.run()
