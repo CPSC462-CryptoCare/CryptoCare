@@ -34,6 +34,7 @@ def index():
         response = requests.get(URL)
         
         #Request successful
+      
         if response.status_code == 200:
             json_response = response.json()
             #store data into cryptocurrency_data list
@@ -88,26 +89,7 @@ def cryptocurrency_in_details(cryptocurrency_asset_id):
     #Error occurred
     else:
         return render_template('error_page.html')
-    
-    
-    #URL to get cryptocurrency data in detail
-    URL = 'https://min-api.cryptocompare.com/data/pricemultifull?fsyms={}&tsyms=USD'.format(cryptocurrency_asset_id)
-    response = requests.get(URL)
-        
-    #Request successful
-    if response.status_code == 200:
-        json_response = response.json()
-        values_dict = json_response["RAW"][""+cryptocurrency_asset_id]["USD"]    
-        display_values_dict = json_response["DISPLAY"][""+cryptocurrency_asset_id]["USD"]
-        
-        currency_details= CrCurrencyDetails(values_dict,display_values_dict)
-        
-    #Error occurred
-    else:
-        return render_template('error_page.html')
-    
-    return render_template('cryptocurrency_in_details.html',currency = currency,currency_details = currency_details)
-     
+         
    
    #URL to get news related to cryptocurrency
     URL = 'https://newsapi.org/v2/everything?q={}&sortBy=publishedAt&apiKey=3fabdc3fed8d481c92f7c2deeb0147e9'.format(currency_name)
@@ -128,6 +110,7 @@ def cryptocurrency_in_details(cryptocurrency_asset_id):
         return render_template('error_page.html')
     
     return render_template('cryptocurrency_in_details.html',currency = currency,currency_details = currency_details)
+
 
 if __name__ == "__main__":
     app.run()
