@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bitcoin Calculator</title>
+                <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="CSS.css">
+
+<!-- jQuery library -->
+<script src="JS.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src=""></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <table>
+                    <tr> <!-- Main Table Header -->
+                        <th colspan="3" class="hd1">Bitcoin Calculator </th>
+                    </tr>
+                    <tr><!-- Subtable Headers -->
+                        <th>Bitcoin</th>
+                        <th>Currency</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr> <!-- USD Inputs and Values -->
+                        <td><input type="text" id="usdInput" oninput="bitTypeUsd()" placeholder="Enter Amount" /></td>
+                        <td class="cValue" id="monetaryUsd">USD - United States Dollar</td>
+                        <td  id="usdValue"><input placeholder="&#x24;0.00" readonly /></td>
+                    </tr>
+                      <tr> <!-- GBP Inputs and Values -->
+                        <td><input type="text" id="gbpInput" oninput="bitTypeGbp()" placeholder="Enter Amount" /></td>
+                        <td class="cValue" id="monetaryGbp">GBP - British Pound Sterling</td>
+                        <td  id="gbpValue"><input placeholder="&#xa3;0.00" readonly /></td>
+                    </tr>
+                      <tr> <!-- EUR Inputs and Values -->
+                        <td><input type="text" id="eurInput" oninput="bitTypeEur()" placeholder="Enter Amount" /></td>
+                        <td class="cValue" id="monetaryEur">EUR - Euro</td>
+                        <td  id="eurValue"><input placeholder="&#x20ac;0.00" readonly /></td>
+                    </tr>
+                      <tr> <!-- CNY - Chinese Yua Inputs and Values -->
+                        <td><input type="text" id="cnyInput" oninput="bitTypeCny()" placeholder="Enter Amount" /></td>
+                        <td class="cValue" id="monetaryCny">CNY - Chinese Yuan</td>
+                        <td  id="cnyValue"><input placeholder="&#xa5;0.00" readonly /></td>
+                    </tr>
+                            <tr> <!-- AUD - Australian Dollar Inputs and Values -->
+                        <td><input type="text" id="audInput" oninput="bitTypeAud()" placeholder="Enter Amount" /></td>
+                        <td class="cValue" id="monetaryAud">AUD - Australian Dollar</td>
+                        <td  id="audValue"><input placeholder="&#x41;&#x24;0.00" readonly /></td>
+                    </tr>
+                   
+                </table>
+              <p id="bitTitle"></p><!-- Locations of error message -->
+            </div>
+        </div>
+    </body>
+</html>

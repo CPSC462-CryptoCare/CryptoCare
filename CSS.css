@@ -1,0 +1,83 @@
+/* Stretches width container across page and moves it down from top of page */
+
+.container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Styles header size and boldness */
+
+.hd1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Turns currency symbol red */
+
+span {
+    color: #FF0000;
+}
+
+/* Give overall font to the body */
+
+body {
+    font-size: 10px;
+}
+
+/* Styles table with border fixed width, border, and shadowing */
+
+table {
+     width: 100%;
+     box-shadow: 2px 2px 2px 2px;
+     border-spacing: 5px;
+     border-collapse: separate;
+     position: fixed;
+ }
+ 
+/* Adds border to table and around cells as well as centers text */
+
+table, td, th {
+    border: 2px solid #000000;
+    text-align: center;
+}
+
+/* Maintains cell and column width */
+
+tr, td {
+    max-width: 45px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+/* Wraps cell content */
+
+.cValue  {
+    white-space: normal;
+}
+
+/* Styles text input fields */
+
+input {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+}
+
+/* Error Message */
+
+#bitTitle {
+    width: 70%;
+    font-size: 20px;
+    color: #FF0000;
+    letter-spacing: 3px;
+    margin: 400px 100px;
+    position: fixed;
+}
+
+/* Styles the not and Disclaimer Message */
+
+.note {
+    text-align: left;
+    padding: 10px 5px;
+    font-weight: bold;
+}
